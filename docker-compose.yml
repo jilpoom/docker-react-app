@@ -1,0 +1,19 @@
+version : "3"
+services:
+  #서비스 이름
+  react:
+  #현 디렉터리에 있는 Dockerfile 사용
+    build:
+      # 도커 이미지를 구성하기 위한 파일과 폴더들의 위치
+      context: .
+      # 도커 파일이 어떤 것인지 지정
+      dockerfile: Dockerfile
+    ports:
+    - "80:80"
+    # 로컬 머신의 파일 매핑
+    volumes:
+      - /usr/src/app/node_modules
+      - ./:/usr/src/app
+    stdin_open: true
+
+      
