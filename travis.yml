@@ -13,6 +13,7 @@ before_install:
 	- echo "start creating an image with dockerfile"
 	- docker build -t jilpoom/docker-react-app -f Dockerfile.dev .
 
+
 # 실행할 스크립트 (테스트 실행)
 script:
 	- docker run -e CI=true jilpoom/docker-react-app npm run test -- --coverage
