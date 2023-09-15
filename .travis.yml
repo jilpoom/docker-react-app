@@ -20,4 +20,4 @@ script:
 
 # 테스트 성공 후에 할 일
 after_success:
-	- echo "Test Success"``
+	- echo "Test Success"
